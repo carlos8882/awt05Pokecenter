@@ -1,5 +1,7 @@
 plugins {
+    id "jacoco"
     id 'java'
+    id "org.sonarqube" version "2.7"
 }
 
 group 'org.awt05'
@@ -18,4 +20,18 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "PokeCenter"
+        property "sonar.host.url", "http://10.28.115.218:9000"
+        property "sonar.login", "22df6dc10f5e98fc7fc5c1b871172a010ed2f4fb"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
