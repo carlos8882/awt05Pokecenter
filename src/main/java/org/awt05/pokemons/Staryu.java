@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Staryu {
+import org.awt05.types.Water;
+
+public class Staryu implements Water {
 
 
 }

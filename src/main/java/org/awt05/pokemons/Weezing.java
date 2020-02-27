@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Weezing {
+import org.awt05.types.Poison;
+
+public class Weezing implements Poison {
 
 
 }

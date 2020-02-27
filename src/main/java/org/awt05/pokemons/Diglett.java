@@ -1,8 +1,9 @@
-
 package org.awt05.pokemons;
 
 
-public class Diglett {
+import org.awt05.types.Ground;
+
+public class Diglett implements Ground {
 
 
 }

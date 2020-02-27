@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Pinsir {
+import org.awt05.types.Bug;
+
+public class Pinsir implements Bug {
 
 
 }

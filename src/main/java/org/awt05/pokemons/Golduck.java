@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Golduck {
+import org.awt05.types.Water;
+
+public class Golduck implements Water {
 
 
 }

@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Mankey {
+import org.awt05.types.Fighting;
+
+public class Mankey implements Fighting {
 
 
 }

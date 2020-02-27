@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Magmar {
+import org.awt05.types.Fire;
+
+public class Magmar implements Fire {
 
 
 }

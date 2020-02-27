@@ -1,8 +1,6 @@
-
 package org.awt05.pokemons;
 
+import org.awt05.types.Poison;
 
-public class Arbok {
-
-
+public class Arbok implements Poison {
 }

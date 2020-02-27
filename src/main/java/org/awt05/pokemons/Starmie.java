@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Starmie {
+import org.awt05.types.Psychic;
+import org.awt05.types.Water;
+
+public class Starmie implements Water, Psychic {
 
 
 }

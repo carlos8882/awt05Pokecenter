@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Growlithe {
+import org.awt05.types.Fire;
+
+public class Growlithe implements Fire {
 
 
 }

@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Rhyhorn {
+import org.awt05.types.Ground;
+import org.awt05.types.Rock;
+
+public class Rhyhorn  implements Ground, Rock {
 
 
 }

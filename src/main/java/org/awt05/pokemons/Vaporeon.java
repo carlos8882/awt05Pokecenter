@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Vaporeon {
+import org.awt05.types.Water;
+
+public class Vaporeon implements Water {
 
 
 }

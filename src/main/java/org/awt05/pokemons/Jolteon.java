@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Jolteon {
+import org.awt05.types.Electric;
+
+public class Jolteon implements Electric {
 
 
 }

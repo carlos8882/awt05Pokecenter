@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Lapras {
+import org.awt05.types.Ice;
+import org.awt05.types.Water;
+
+public class Lapras implements Water, Ice {
 
 
 }

@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Tentacruel {
+import org.awt05.types.Poison;
+import org.awt05.types.Water;
+
+public class Tentacruel implements Water, Poison {
 
 
 }

@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Magikarp {
+import org.awt05.types.Water;
+
+public class Magikarp implements Water {
 
 
 }

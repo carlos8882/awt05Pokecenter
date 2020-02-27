@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Hitmonchan {
+import org.awt05.types.Fighting;
+
+public class Hitmonchan implements Fighting {
 
 
 }

@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Koffing {
+import org.awt05.types.Poison;
+
+public class Koffing implements Poison {
 
 
 }

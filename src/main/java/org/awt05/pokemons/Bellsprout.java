@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Bellsprout {
+import org.awt05.types.Grass;
+import org.awt05.types.Poison;
+
+public class Bellsprout implements Grass, Poison {
 
 
 }

@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Victreebel {
+import org.awt05.types.Grass;
+import org.awt05.types.Poison;
+
+public class Victreebel implements Grass, Poison {
 
 
 }

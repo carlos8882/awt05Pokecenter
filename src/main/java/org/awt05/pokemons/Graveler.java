@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Graveler {
+import org.awt05.types.Ground;
+import org.awt05.types.Rock;
+
+public class Graveler implements Rock, Ground {
 
 
 }

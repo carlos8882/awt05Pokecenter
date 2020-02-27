@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Haunter {
+import org.awt05.types.Ghost;
+import org.awt05.types.Poison;
+
+public class Haunter implements Ghost, Poison {
 
 
 }

@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Dragonair {
+import org.awt05.types.Dragon;
+
+public class Dragonair implements Dragon {
 
 
 }

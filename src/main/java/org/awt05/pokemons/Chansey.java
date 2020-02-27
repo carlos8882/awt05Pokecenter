@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Chansey {
+import org.awt05.types.Normal;
+
+public class Chansey implements Normal {
 
 
 }

@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Hitmonlee {
+import org.awt05.types.Fighting;
+
+public class Hitmonlee implements Fighting {
 
 
 }

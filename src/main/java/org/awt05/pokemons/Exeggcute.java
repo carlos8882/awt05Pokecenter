@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Exeggcute {
+import org.awt05.types.Grass;
+import org.awt05.types.Psychic;
+
+public class Exeggcute implements Grass, Psychic {
 
 
 }

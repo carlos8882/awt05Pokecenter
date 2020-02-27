@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Muk {
+import org.awt05.types.Poison;
+
+public class Muk implements Poison {
 
 
 }

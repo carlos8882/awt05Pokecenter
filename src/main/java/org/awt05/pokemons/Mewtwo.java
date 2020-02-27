@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Mewtwo {
+import org.awt05.types.Psychic;
+
+public class Mewtwo implements Psychic {
 
 
 }

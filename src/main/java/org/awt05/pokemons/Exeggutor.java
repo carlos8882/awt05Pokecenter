@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Exeggutor {
+import org.awt05.types.Grass;
+import org.awt05.types.Psychic;
+
+public class Exeggutor implements Grass, Psychic {
 
 
 }

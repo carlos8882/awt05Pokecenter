@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Dragonite {
+import org.awt05.types.Dragon;
+import org.awt05.types.Flying;
+
+public class Dragonite implements Dragon, Flying {
 
 
 }

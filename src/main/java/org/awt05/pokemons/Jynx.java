@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Jynx {
+import org.awt05.types.Ice;
+import org.awt05.types.Psychic;
+
+public class Jynx implements Ice, Psychic {
 
 
 }

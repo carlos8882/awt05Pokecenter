@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Dewgong {
+import org.awt05.types.Ice;
+import org.awt05.types.Water;
+
+public class Dewgong implements Water, Ice {
 
 
 }

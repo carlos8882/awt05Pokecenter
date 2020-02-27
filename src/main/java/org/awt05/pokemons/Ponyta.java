@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Ponyta {
+import org.awt05.types.Fire;
+
+public class Ponyta implements Fire {
 
 
 }

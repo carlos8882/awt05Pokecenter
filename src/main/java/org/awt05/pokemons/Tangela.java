@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Tangela {
+import org.awt05.types.Grass;
+
+public class Tangela implements Grass {
 
 
 }

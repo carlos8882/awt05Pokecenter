@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Machoke {
+import org.awt05.types.Fighting;
+
+public class Machoke implements Fighting {
 
 
 }

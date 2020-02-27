@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Machop {
+import org.awt05.types.Fighting;
+
+public class Machop implements Fighting {
 
 
 }

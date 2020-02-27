@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Cubone {
+import org.awt05.types.Ground;
+
+public class Cubone implements Ground {
 
 
 }

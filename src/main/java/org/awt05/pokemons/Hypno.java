@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Hypno {
+import org.awt05.types.Psychic;
+
+public class Hypno implements Psychic {
 
 
 }

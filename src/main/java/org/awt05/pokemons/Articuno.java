@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Articuno {
+import org.awt05.types.Flying;
+import org.awt05.types.Ice;
+
+public class Articuno implements Ice, Flying {
 
 
 }

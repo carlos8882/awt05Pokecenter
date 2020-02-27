@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Kadabra {
+import org.awt05.types.Psychic;
+
+public class Kadabra implements Psychic {
 
 
 }

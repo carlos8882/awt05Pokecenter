@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Seaking {
+import org.awt05.types.Water;
+
+public class Seaking implements Water {
 
 
 }

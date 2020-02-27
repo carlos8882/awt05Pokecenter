@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Poliwhirl {
+import org.awt05.types.Water;
+
+public class Poliwhirl implements Water {
 
 
 }

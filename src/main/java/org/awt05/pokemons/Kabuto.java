@@ -2,7 +2,10 @@
 package org.awt05.pokemons;
 
 
-public class Kabuto {
+import org.awt05.types.Rock;
+import org.awt05.types.Water;
+
+public class Kabuto implements Rock, Water {
 
 
 }

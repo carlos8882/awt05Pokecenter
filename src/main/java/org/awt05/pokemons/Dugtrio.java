@@ -2,7 +2,9 @@
 package org.awt05.pokemons;
 
 
-public class Dugtrio {
+import org.awt05.types.Ground;
+
+public class Dugtrio implements Ground {
 
 
 }
