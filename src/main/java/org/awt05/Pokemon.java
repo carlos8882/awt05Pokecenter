@@ -1,4 +1,5 @@
 package org.awt05;
+
 import java.util.UUID;
 
 public abstract class Pokemon {
