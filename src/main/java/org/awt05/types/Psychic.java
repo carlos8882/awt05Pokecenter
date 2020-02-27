@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Psychic {
+public interface Psychic extends Pokemon {
 }

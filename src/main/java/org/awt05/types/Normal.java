@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Normal {
+public interface Normal  extends Pokemon{
 }

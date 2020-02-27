@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Fire {
+public interface Fire extends Pokemon {
 }

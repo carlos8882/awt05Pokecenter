@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Water {
+public interface Water extends Pokemon {
 }

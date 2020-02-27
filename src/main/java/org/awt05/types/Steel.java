@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Steel {
+public interface Steel extends Pokemon {
 }

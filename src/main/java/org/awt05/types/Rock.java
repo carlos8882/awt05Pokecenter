@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Rock {
+public interface Rock extends Pokemon {
 }
