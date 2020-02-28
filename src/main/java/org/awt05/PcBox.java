@@ -18,9 +18,9 @@ public class PcBox {
         return pokemonOut;
     }
 
-    public void addPokemon(Pokemon pokemon){
+    public void addPokemon(Pokemon pokemonIn){
         try {
-            pokemonGang[searchFreePokemonSpace()] = pokemon;
+            pokemonGang[searchFreePokemonSpace()] = pokemonIn;
         } catch (IllegalStateException e){
             e.printStackTrace();
         }
@@ -33,37 +33,40 @@ public class PcBox {
             }catch (IllegalStateException e){
                 e.printStackTrace();
             }
-            Pokemon pokemonToRetrieve = pokemonGang[position];
+            Pokemon pokemonOut = pokemonGang[position];
             pokemonGang[position] = null;
-        return pokemonToRetrieve;
+        return pokemonOut;
     }
 
-    public int searchPokemon(int idPokemon) {
-        boolean isFound;
-        int position = 0;
+    private int searchPokemon(int idPokemon) {
+        int pokePosition = -1;
         for (int i = 0; i< pokemonGang.length; i++) {
-            isFound = pokemonGang[i].getId() == idPokemon;
-            if (isFound) {
-                position = i;
+            if (pokemonGang[i].getId() == idPokemon) {
+                pokePosition = i;
                 break;
-            } else {
-                throw new IllegalStateException("The pokemon has not been found");
             }
         }
-        return position;
+        if (pokePosition < 0){
+                throw new IllegalStateException("The pokemon has not been found");
+        }else {
+            System.out.println("The pokemon has been bound");
+        }
+        return pokePosition;
     }
-    public int searchFreePokemonSpace(){
-        boolean isFree;
-        int freePosition = 0;
+    private int searchFreePokemonSpace(){
+        int freePosition = -1;
         for(int i = 0; i< pokemonGang.length; i++){
-            isFree = pokemonGang[i] == null;
-            if (isFree){
+            if (pokemonGang[i] == null){
                 freePosition = i;
                 break;
-            }else {
-                throw new IllegalStateException("There is no free position found");
             }
         }
+        if(freePosition < 0) {
+            throw new IllegalStateException("There is no free position found");
+        }else {
+            System.out.println("Free position founded");
+        }
+
         return freePosition;
     }
 
