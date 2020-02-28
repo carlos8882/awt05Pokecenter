@@ -1,6 +1,5 @@
 package org.awt05;
 
-import java.util.UUID;
 
 public class Trainer {
 
@@ -32,4 +31,5 @@ public class Trainer {
     public void setPokemons(Pokemon[] pokemons) {
         this.pokemons = pokemons;
     }
+
 }
