@@ -4,12 +4,12 @@ package org.awt05;
 public class PcBox {
 
     private Trainer currenTrainer;
-    private Pokemon[] pokemons;
+    private Pokemon[] pokemonGang;
 
 
     public PcBox(Trainer trainer) {
         this.currenTrainer = trainer;
-        this.pokemons = new Pokemon[24];
+        this.pokemonGang = new Pokemon[24];
     }
 
     public Pokemon switchPokemon(Pokemon pokemonIn, int idPokemon){
@@ -20,7 +20,7 @@ public class PcBox {
 
     public void addPokemon(Pokemon pokemon){
         try {
-            pokemons[searchFreePokemonSpace()] = pokemon;
+            pokemonGang[searchFreePokemonSpace()] = pokemon;
         } catch (IllegalStateException e){
             e.printStackTrace();
         }
@@ -33,16 +33,16 @@ public class PcBox {
             }catch (IllegalStateException e){
                 e.printStackTrace();
             }
-            Pokemon pokemonToRetrieve = pokemons[position];
-            pokemons[position] = null;
+            Pokemon pokemonToRetrieve = pokemonGang[position];
+            pokemonGang[position] = null;
         return pokemonToRetrieve;
     }
 
     public int searchPokemon(int idPokemon) {
         boolean isFound;
         int position = 0;
-        for (int i = 0; i<pokemons.length; i++) {
-            isFound = pokemons[i].getId() == idPokemon;
+        for (int i = 0; i< pokemonGang.length; i++) {
+            isFound = pokemonGang[i].getId() == idPokemon;
             if (isFound) {
                 position = i;
                 break;
@@ -55,8 +55,8 @@ public class PcBox {
     public int searchFreePokemonSpace(){
         boolean isFree;
         int freePosition = 0;
-        for(int i=0; i<pokemons.length; i++){
-            isFree = pokemons[i] == null;
+        for(int i = 0; i< pokemonGang.length; i++){
+            isFree = pokemonGang[i] == null;
             if (isFree){
                 freePosition = i;
                 break;
