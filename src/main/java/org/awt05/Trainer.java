@@ -27,16 +27,13 @@ public class Trainer {
     }
 
     public boolean hasPokemon(){
-        if (this.bag
+        return this.bag
                 .getTeam()
-                .size() == 0){
-            return false;
-        }
-        return true;
+                .length == 0;
     }
 
+    //ver si es util recibir el poke o de la mochila agregarlos
     public void addPokemon(Pokemon pokemon){
-        this.bag
-            .addPokemon(pokemon);
+        this.bag.addPokemon(pokemon);
     }
 }
