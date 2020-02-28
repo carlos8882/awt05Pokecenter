@@ -1,6 +1,5 @@
 package org.awt05;
 
-
 public class Trainer {
 
     private final int id;
