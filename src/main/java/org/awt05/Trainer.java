@@ -4,12 +4,12 @@ import java.util.UUID;
 
 public class Trainer {
 
-    private final String id;
+    private final int id;
     private String name;
     private Pokemon pokemons[];
 
-    public Trainer(String name) {
-        this.id = UUID.randomUUID().toString();
+    public Trainer(String name, int id) {
+        this.id = id;
         this.name = name;
     }
 
@@ -21,7 +21,7 @@ public class Trainer {
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

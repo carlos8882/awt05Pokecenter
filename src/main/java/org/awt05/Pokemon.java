@@ -8,7 +8,6 @@ public abstract class Pokemon {
     private String nickname;
     private boolean isDamaged;
 
-
     public Pokemon(){
         this.getClass().getSimpleName();
         this.pokeId= UUID.randomUUID().toString();
