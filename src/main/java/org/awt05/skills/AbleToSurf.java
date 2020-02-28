@@ -1,4 +1,4 @@
-package org.awt05;
+package org.awt05.skills;
 
 public interface AbleToSurf {
     default void surf() {

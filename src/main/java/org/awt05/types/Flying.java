@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Flying extends Pokemon {
+import org.awt05.skills.AbleToFly;
+
+public interface Flying extends AbleToFly {
 }

@@ -1,7 +1,7 @@
 package org.awt05;
 
 public interface Pokemon {
-    int id=0;
+    int pokeId=0;
     String nickname="Ninguno";
     boolean isDamaged=false;
 
@@ -9,7 +9,7 @@ public interface Pokemon {
     String getNickname();
     boolean getIsDamaged();
 
-    void setId(int id);
+    void setId(int ID);
     void setNickname(String nickname);
     void setIsDamaged(boolean damaged);
 }

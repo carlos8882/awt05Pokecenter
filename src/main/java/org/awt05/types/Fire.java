@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Fire extends Pokemon {
+import org.awt05.skills.AbleToEmber;
+
+public interface Fire extends AbleToEmber {
 }
