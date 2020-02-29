@@ -3,15 +3,14 @@ package org.awt05;
 
 public class PcBox {
 
-    private Trainer currenTrainer;
-
     private Pokemon[] pokemonGang;
 
-
-    public PcBox(Trainer trainer) {
-        this.currenTrainer = trainer;
-
+    public PcBox() {
         this.pokemonGang = new Pokemon[24];
+    }
+
+    public Pokemon[] getBox(){
+        return this.pokemonGang;
     }
 
     public Pokemon switchPokemon(Pokemon pokemonIn, int idPokemon) {
