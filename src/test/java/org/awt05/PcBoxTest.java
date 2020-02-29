@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class PcBoxTest {
     @Test
-    public void whenPcBoxAddPokemonAddToGang(){
+    public void whenPcBoxGetPokemonAddToGang(){
         //given
         Pokemon pokemonTest1= new Pokemon("pikachu", false, 34);
 //        Pokemon pokemonTest2 = new Pokemon("garados", false, 56);
@@ -19,4 +19,7 @@ public class PcBoxTest {
         //then
         assertArrayEquals(expectedBox, currentBox.getBox());
     }
+    /*@Test
+    public void*/
+
 }

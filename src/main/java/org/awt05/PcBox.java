@@ -71,5 +71,11 @@ public class PcBox {
 
         return freePosition;
     }
+    public boolean isFreeSpaceInsideBox(){
+        return searchFreePokemonSpace() != -1;
+    }
+    public boolean pokemonFoundedInsideBox(int pokemonId){
+        return searchPokemon(pokemonId) != -1;
+    }
 
 }
