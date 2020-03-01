@@ -12,7 +12,7 @@ public class Pokemon {
     }
 
     public void isHealed() {
-        isDamage = true;
+        isDamage = false;
     }
 
     private boolean isDamage;
@@ -21,7 +21,9 @@ public class Pokemon {
     private List <Species> listSpecies;
 
     //Constructor
-    public Pokemon(){}
+    public Pokemon(boolean isDamage){
+        this.isDamage = isDamage;
+    }
 
     //Métodos de la clase
     public void metodo1()
