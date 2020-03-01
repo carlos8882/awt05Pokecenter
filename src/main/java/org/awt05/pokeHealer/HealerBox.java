@@ -1,6 +1,6 @@
-package org.awt05;
+package org.awt05.pokeHealer;
 
-import java.util.List;
+import org.awt05.Trainer;
 
 public class HealerBox {
     private Trainer trainer;

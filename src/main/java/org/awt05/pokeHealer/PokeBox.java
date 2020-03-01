@@ -1,4 +1,6 @@
-package org.awt05;
+package org.awt05.pokeHealer;
+
+import org.awt05.Pokemon;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,8 +23,12 @@ public class PokeBox implements Iterable<Pokemon>{
         pokemons.add(pokemon);
     }
 
-    public Pokemon remove(int index) {
-        return pokemons.remove(index);
+    public Pokemon remove() {
+        return pokemons.remove(0);
+    }
+
+    public int getSize() {
+        return pokemons.size();
     }
 
     @Override
