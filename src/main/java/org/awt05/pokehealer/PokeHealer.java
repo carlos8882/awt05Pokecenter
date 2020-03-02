@@ -49,7 +49,7 @@ public class PokeHealer {
 
     private void heal(HealerBox healerBox) {
         for (Pokemon pokemon: healerBox) {
-            pokemon.heal();
+            pokemon.setIsDamage(false);
         }
     }
 

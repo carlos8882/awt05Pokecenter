@@ -17,8 +17,8 @@ public class Pokemon {
         return isDamage;
     }
 
-    public void heal() {
-        isDamage = false;
+    public void setIsDamage(boolean value) {
+        isDamage = value;
     }
 
     @Override
