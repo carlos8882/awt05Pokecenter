@@ -33,10 +33,6 @@ public class PokemonContainer implements Iterable<Pokemon>{
         clear();
     }
 
-    public Pokemon remove() {
-        return pokemons.remove(0);
-    }
-
     public Pokemon remove(int index) {
         return pokemons.remove(index);
     }

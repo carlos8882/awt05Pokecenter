@@ -5,13 +5,8 @@ import java.util.List;
 public class Pokemon {
     private String nickname;
     private boolean isDamage;
-    private int id;
-    private List <String> listTypes;
-    private List <Species> listSpecies;
 
-    public Pokemon(boolean isDamage){
-        this.isDamage = isDamage;
-    }
+    public Pokemon(boolean isDamage){ this.isDamage = isDamage; }
 
     public boolean isDamage() {
         return isDamage;
@@ -25,5 +20,9 @@ public class Pokemon {
     public String toString()
     {
         return this.getClass().toString();
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 }
