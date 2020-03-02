@@ -8,8 +8,6 @@ public class PcBoxTest {
     public void whenPcBoxGetPokemonAddToGang(){
         //given
         Pokemon pokemonTest1= new Pokemon("pikachu", false, 34);
-//        Pokemon pokemonTest2 = new Pokemon("garados", false, 56);
-//        Pokemon pokemonTest3 = new Pokemon("charmander", false, 86);
         Pokemon[] expectedBox = new Pokemon[24];
         expectedBox[0] = pokemonTest1;
         //when

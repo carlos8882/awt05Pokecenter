@@ -55,7 +55,7 @@ public class BillPc {
         System.out.println("Default box was Switch");
     }
 
-    private boolean isTrainerRegistered(int trainerId){
+    public boolean isTrainerRegistered(int trainerId){
        return accountBill.containsKey(trainerId);
     }
 

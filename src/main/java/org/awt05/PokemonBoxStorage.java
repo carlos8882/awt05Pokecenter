@@ -1,15 +1,14 @@
 package org.awt05;
 
+public class PokemonBoxStorage {
 
-public class PcBox extends PokemonBoxStorage {
+    protected Pokemon[] pokemonGang;
 
-    //private Pokemon[] pokemonGang;
+    public PokemonBoxStorage(){
 
-    public PcBox() {
-        this.pokemonGang = new Pokemon[24];
     }
 
-    /*public Pokemon[] getBox(){
+    public Pokemon[] getBox(){
         return this.pokemonGang;
     }
 
@@ -39,7 +38,7 @@ public class PcBox extends PokemonBoxStorage {
         return pokemonOut;
     }
 
-    private int searchPokemon(int idPokemon) {
+    protected int searchPokemon(int idPokemon) {
         int pokePosition = -1;
         for (int i = 0; i < pokemonGang.length; i++) {
             if (pokemonGang[i].getId() == idPokemon) {
@@ -55,7 +54,7 @@ public class PcBox extends PokemonBoxStorage {
         return pokePosition;
     }
 
-    private int searchFreePokemonSpace() {
+    protected int searchFreePokemonSpace() {
         int freePosition = -1;
         for (int i = 0; i < pokemonGang.length; i++) {
             if (pokemonGang[i] == null) {
@@ -77,5 +76,4 @@ public class PcBox extends PokemonBoxStorage {
     public boolean isPokemonFoundedInsideBox(int pokemonId){
         return searchPokemon(pokemonId) != -1;
     }
-*/
 }
