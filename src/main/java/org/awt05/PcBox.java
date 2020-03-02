@@ -74,7 +74,7 @@ public class PcBox {
     public boolean isFreeSpaceInsideBox(){
         return searchFreePokemonSpace() != -1;
     }
-    public boolean pokemonFoundedInsideBox(int pokemonId){
+    public boolean isPokemonFoundedInsideBox(int pokemonId){
         return searchPokemon(pokemonId) != -1;
     }
 

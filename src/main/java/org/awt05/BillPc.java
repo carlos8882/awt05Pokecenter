@@ -9,8 +9,19 @@ public class BillPc {
     public BillPc(){
         accountBill = new HashMap<>();
     }
+
+    public PcBox showDefaultBox(int trainerId){
+        PcBox showBox = null;
+        if (isTrainerRegistered(trainerId)){
+            showBox = accountBill.get(trainerId).getBox();
+        }else {
+            System.out.println("Unregistered trainer, register please");
+        }
+        return showBox;
+    }
+
     public void registerTrainer(int trainerId){
-        if (isRegistered(trainerId)) {
+        if (isTrainerRegistered(trainerId)) {
             BoxList boxList = new BoxList();
             accountBill.put(trainerId, boxList);
             System.out.println("The trainer was registered successfully");
@@ -28,10 +39,10 @@ public class BillPc {
             System.out.println("The pokemon was not deposited,There is not available space");
         }
     }
-    public Pokemon withDrawBox(int trainerId, int pokemonID){
+    public Pokemon withDrawPokemon(int trainerId, int pokemonID){
         PcBox box =accountBill.get(trainerId).getBox();
         Pokemon pokemonOut= null;
-        if (box.pokemonFoundedInsideBox(pokemonID)){
+        if (box.isPokemonFoundedInsideBox(pokemonID)){
             pokemonOut = box.retrievePokemon(pokemonID);
             System.out.println("The pokemon was withdraw successfully");
         }else {
@@ -44,9 +55,11 @@ public class BillPc {
         System.out.println("Default box was Switch");
     }
 
-    private boolean isRegistered(int trainerId){
+    private boolean isTrainerRegistered(int trainerId){
        return accountBill.containsKey(trainerId);
     }
+
+
 
 
 
