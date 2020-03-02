@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Ghost extends Pokemon {
+import org.awt05.skills.AbleToConfusion;
+
+public interface Ghost extends AbleToConfusion {
 }

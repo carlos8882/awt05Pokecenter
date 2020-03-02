@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Water extends Pokemon {
+import org.awt05.skills.AbleToSurf;
+
+public interface Water extends AbleToSurf {
 }

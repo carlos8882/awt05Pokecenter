@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Dragon extends Pokemon {
+public interface Dragon {
 }

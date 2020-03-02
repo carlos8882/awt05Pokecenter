@@ -1,15 +1,28 @@
 package org.awt05;
 
-public interface Pokemon {
-    int pokeId=0;
-    String nickname="Ninguno";
-    boolean isDamaged=false;
+public class Pokemon {
 
-    int getId();
-    String getNickname();
-    boolean getIsDamaged();
+    private int pokeId;
+    private String nickname="Ninguno";
+    private boolean isDamaged=false;
 
-    void setId(int ID);
-    void setNickname(String nickname);
-    void setIsDamaged(boolean damaged);
+    public int getPokeId(){
+        return pokeId;
+    }
+    public String getNickname(){
+        return nickname;
+    }
+    public boolean isDamaged(){
+        return isDamaged;
+    }
+    public void setPokeId(int pokeId) {
+        this.pokeId = pokeId;
+    }
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+    public void setDamaged(boolean damaged) {
+        this.isDamaged = damaged;
+    }
+
 }

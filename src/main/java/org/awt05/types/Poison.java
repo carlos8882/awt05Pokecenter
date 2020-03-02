@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Poison extends Pokemon {
+import org.awt05.skills.AbleToPoison;
+
+public interface Poison extends AbleToPoison {
 }

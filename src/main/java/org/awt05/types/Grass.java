@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Grass extends Pokemon {
+public interface Grass {
 }

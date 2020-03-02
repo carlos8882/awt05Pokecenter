@@ -1,4 +1,4 @@
 package org.awt05.types;
 
-public interface Fighting extends Pokemon {
+public interface Fighting {
 }

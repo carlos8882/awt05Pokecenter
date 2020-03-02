@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Ground extends Pokemon {
+import org.awt05.skills.AbleToStrength;
+
+public interface Ground extends AbleToStrength {
 }

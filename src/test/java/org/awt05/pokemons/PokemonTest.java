@@ -1,6 +1,5 @@
 package org.awt05.pokemons;
 
-import org.awt05.types.Pokemon;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -9,6 +8,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class PokemonTest {
+    /*
 
     @ParameterizedTest
     @MethodSource("pokemonProvider")
@@ -172,4 +172,6 @@ public class PokemonTest {
                 new Mew()
         );
     }
+
+     */
 }

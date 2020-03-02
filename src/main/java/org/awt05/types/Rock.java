@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Rock extends Pokemon {
+import org.awt05.skills.AbleToStrength;
+
+public interface Rock extends AbleToStrength {
 }

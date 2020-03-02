@@ -1,4 +1,7 @@
 package org.awt05.types;
 
-public interface Fairy extends Pokemon {
+import org.awt05.skills.AbleToHeal;
+import org.awt05.skills.AbleToMetronome;
+
+public interface Fairy extends AbleToMetronome, AbleToHeal {
 }

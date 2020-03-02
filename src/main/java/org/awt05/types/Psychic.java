@@ -1,4 +1,6 @@
 package org.awt05.types;
 
-public interface Psychic extends Pokemon {
+import org.awt05.skills.AbleToConfusion;
+
+public interface Psychic extends AbleToConfusion {
 }
