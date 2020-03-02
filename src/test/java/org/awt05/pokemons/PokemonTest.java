@@ -1,20 +1,29 @@
 package org.awt05.pokemons;
-
+import org.awt05.Pokemon;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class PokemonTest {
-    /*
 
     @ParameterizedTest
     @MethodSource("pokemonProvider")
     public void whenICreateNewPokemonThenItIsNotNull(Pokemon pokemon) {
-        // Assert
+        // Given
+        String expectedNickName = "John";
+
+        // When
+        pokemon.setNickname("John");
+        String currentNickName = pokemon.getNickname();
+
+
+        // Then
         assertNotNull(pokemon);
+        assertEquals(expectedNickName, currentNickName);
     }
 
     static Stream<Pokemon> pokemonProvider() {
@@ -173,5 +182,5 @@ public class PokemonTest {
         );
     }
 
-     */
+
 }

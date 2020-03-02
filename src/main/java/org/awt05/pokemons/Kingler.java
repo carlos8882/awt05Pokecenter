@@ -2,9 +2,10 @@
 package org.awt05.pokemons;
 
 
+import org.awt05.Pokemon;
 import org.awt05.types.Water;
 
-public class Kingler implements Water {
+public class Kingler extends Pokemon implements Water {
 
 
 }
