@@ -1,21 +1,17 @@
 package org.awt05;
 
+/**
+ * @author: Carlos Meneses Covarrubias
+ * @date: 03/02/2020
+ * @version: 1.0
+ */
+
 public class PokemonBoxStorage {
 
     protected Pokemon[] pokemonGang;
 
-    public PokemonBoxStorage(){
-
-    }
-
-    public Pokemon[] getBox(){
+    public Pokemon[] getBox() {
         return this.pokemonGang;
-    }
-
-    public Pokemon switchPokemon(Pokemon pokemonIn, int idPokemon) {
-        Pokemon pokemonOut = retrievePokemon(idPokemon);
-        addPokemon(pokemonIn);
-        return pokemonOut;
     }
 
     public void addPokemon(Pokemon pokemonIn) {
@@ -41,7 +37,7 @@ public class PokemonBoxStorage {
     protected int searchPokemon(int idPokemon) {
         int pokePosition = -1;
         for (int i = 0; i < pokemonGang.length; i++) {
-            if (pokemonGang[i].getId() == idPokemon) {
+            if (pokemonGang[i] != null && pokemonGang[i].getId() == idPokemon) {
                 pokePosition = i;
                 break;
             }
@@ -70,10 +66,12 @@ public class PokemonBoxStorage {
 
         return freePosition;
     }
-    public boolean isFreeSpaceInsideBox(){
+
+    public boolean isFreeSpaceInsideBox() {
         return searchFreePokemonSpace() != -1;
     }
-    public boolean isPokemonFoundedInsideBox(int pokemonId){
+
+    public boolean isPokemonFoundedInsideBox(int pokemonId) {
         return searchPokemon(pokemonId) != -1;
     }
 }

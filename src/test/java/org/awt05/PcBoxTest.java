@@ -17,7 +17,5 @@ public class PcBoxTest {
         //then
         assertArrayEquals(expectedBox, currentBox.getBox());
     }
-    /*@Test
-    public void*/
 
 }

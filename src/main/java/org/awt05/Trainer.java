@@ -4,7 +4,7 @@ public class Trainer {
 
     private final int id;
     private String name;
-    private Pokemon pokemons[];
+    private Pokemon[] pokemons;
 
     public Trainer(String name, int id) {
         this.id = id;
