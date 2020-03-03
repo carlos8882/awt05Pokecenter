@@ -1,5 +1,6 @@
 package org.awt05.trainer;
 
+import org.awt05.pokemons.Chansey;
 import org.junit.jupiter.api.Test;
 import org.awt05.Pokemon;
 
@@ -10,7 +11,7 @@ class BackpackTest {
     @Test
     void whenTrainerGetsPokemonAddsToItsTeam() {
         //given
-        Pokemon pokemon1 = new Pokemon();
+        Pokemon pokemon1 = new Chansey();
         Backpack backpack = new Backpack();
 
         //when

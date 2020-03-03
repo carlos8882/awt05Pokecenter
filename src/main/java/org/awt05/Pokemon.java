@@ -1,7 +1,7 @@
 package org.awt05;
 import java.util.UUID;
 
-public class Pokemon {
+public abstract class Pokemon {
 
     private String pokeId;
     private String nickname;

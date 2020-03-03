@@ -26,10 +26,6 @@ public class Trainer {
         return trainerId;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setBag(Backpack bag) {
         this.bag = bag;
     }

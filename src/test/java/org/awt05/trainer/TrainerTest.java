@@ -1,6 +1,8 @@
 package org.awt05.trainer;
 
 import org.awt05.Pokemon;
+import org.awt05.pokemons.Bellsprout;
+import org.awt05.pokemons.Nidoking;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,11 +27,10 @@ public class TrainerTest {
     }
 
     @Test
-    void GivenASettedName_WhenGettingName_ItReturnsTheSameName() {
+    void whenGettingName_ItReturnsTheSameName() {
         //given
         String name = "Test";
-        Trainer trainer = new Trainer("name");
-        trainer.setName(name);
+        Trainer trainer = new Trainer(name);
 
         //when
         String name2 = trainer.getName();
@@ -39,9 +40,16 @@ public class TrainerTest {
     }
 
     @Test
-    void GivenASettedBag_WhenGettingBag_ItReturnsTheSameBag() {
+    void givenAPokemon_WhenAddingToATrainerTeam_ThenItIsCorrectlyAdded(){
         //given
-        Pokemon pokemon = new Pokemon();
+        Pokemon pokemon = new Nidoking();
+
+    }
+
+    @Test
+    void givenASettedBag_WhenGettingBag_ItReturnsTheSameBag() {
+        //given
+        Pokemon pokemon = new Bellsprout();
         Backpack bag = new Backpack();
         bag.add(pokemon);
         Trainer trainer = new Trainer("Trainer");
