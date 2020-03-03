@@ -1,6 +1,5 @@
 package org.awt05;
 
-import org.awt05.dummies.Pokemon;
 import org.awt05.exceptions.PokemonOverflowContainerException;
 
 import java.util.ArrayList;
