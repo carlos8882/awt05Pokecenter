@@ -1,5 +1,6 @@
 package org.awt05.trainer;
 
+import org.awt05.dummies.Pokemon;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -39,5 +40,17 @@ public class TrainerTest {
 
     @Test
     void GivenASettedBag_WhenGettingBag_ItReturnsTheSameBag() {
+        //given
+        Pokemon pokemon = new Pokemon(false);
+        Backpack bag = new Backpack();
+        bag.add(pokemon);
+        Trainer trainer = new Trainer("Trainer");
+        trainer.setBag(bag);
+
+        //when
+        Backpack bag2 = trainer.getBag();
+
+        //then
+        assertEquals(bag, bag2);
     }
 }
