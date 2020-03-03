@@ -1,6 +1,5 @@
 package org.awt05;
 
-import org.awt05.dummies.Pokemon;
 import org.awt05.dummies.Trainer;
 import org.awt05.exceptions.PokemonInvalidStateException;
 import org.awt05.exceptions.PokemonOverflowContainerException;
@@ -177,7 +176,7 @@ public class ConsoleClient {
                 Pokemon pokemon = iterator.next();
                 builder.append("\t").append(i).append(") ")
                         .append(pokemon.toString()).append(", ")
-                        .append("damaged: ").append(pokemon.isDamage())
+                        .append("damaged: ").append(pokemon.getIsDamaged())
                         .append("\n");
             }
             isEnable = true;

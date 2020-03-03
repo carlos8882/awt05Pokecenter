@@ -1,8 +1,8 @@
 package org.awt05.pokehealer;
 
-import org.awt05.dummies.Ghost;
-import org.awt05.dummies.Poison;
-import org.awt05.dummies.Pokemon;
+import org.awt05.types.Ghost;
+import org.awt05.types.Poison;
+import org.awt05.Pokemon;
 import org.awt05.PokemonContainer;
 import org.awt05.exceptions.PokemonInvalidStateException;
 import org.awt05.exceptions.PokemonTypeNotSupportedException;
@@ -21,7 +21,7 @@ public class HealerBox extends PokemonContainer {
 
     @Override
     public void add(Pokemon pokemon) {
-        if (!pokemon.isDamage()) {
+        if (!pokemon.getIsDamaged()) {
             throw new PokemonInvalidStateException(pokemon);
         }
         if (pokemon instanceof Poison || pokemon instanceof Ghost) {

@@ -1,6 +1,6 @@
 package org.awt05.exceptions;
 
-import org.awt05.dummies.Pokemon;
+import org.awt05.Pokemon;
 
 public class PokemonTypeNotSupportedException extends RuntimeException {
 

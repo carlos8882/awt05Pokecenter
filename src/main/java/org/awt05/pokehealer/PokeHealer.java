@@ -1,6 +1,6 @@
 package org.awt05.pokehealer;
 
-import org.awt05.dummies.Pokemon;
+import org.awt05.Pokemon;
 import org.awt05.dummies.Trainer;
 import org.awt05.PokemonContainer;
 import org.awt05.exceptions.PokemonInvalidStateException;
@@ -58,7 +58,7 @@ public class PokeHealer {
 
     private void heal(HealerBox healerBox) {
         for (Pokemon pokemon: healerBox) {
-            pokemon.setIsDamage(false);
+            pokemon.setDamaged(false);
         }
     }
 
