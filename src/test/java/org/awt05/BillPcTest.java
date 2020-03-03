@@ -2,8 +2,8 @@ package org.awt05;
 
 import org.awt05.billPc.BillPc;
 import org.awt05.billPc.BoxList;
-import org.awt05.dummies.Pokemon;
 import org.awt05.dummies.Trainer;
+import org.awt05.pokemons.Charizard;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class BillPcTest {
     public void whenThereIsANewTrainerRegister() {
         //given
         Trainer trainerTest = new Trainer();
-        Pokemon pokemonTest = new Pokemon(true);
+        Pokemon pokemonTest = new Charizard();
         List<Pokemon> expectedBox = new ArrayList<>();
         expectedBox.add(pokemonTest);
         //then
