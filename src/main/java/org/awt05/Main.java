@@ -1,7 +1,6 @@
 package org.awt05;
 
-import org.awt05.dummies.Gengar;
-import org.awt05.dummies.Pokemon;
+import org.awt05.pokemons.Gengar;
 import org.awt05.trainer.Trainer;
 import org.awt05.pokehealer.PokeHealer;
 
@@ -23,11 +22,11 @@ public class Main {
             Trainer trainer = new Trainer("Trainer");
 
             PokemonContainer backpack = trainer.getBag();
-            backpack.add(new Pokemon(true));
-            backpack.add(new Pokemon(true));
-            backpack.add(new Pokemon(false));
-            backpack.add(new Pokemon(true));
-            backpack.add(new Gengar(true));
+            backpack.add(new Pokemon());
+            backpack.add(new Pokemon());
+            backpack.add(new Pokemon());
+            backpack.add(new Pokemon());
+            backpack.add(new Gengar());
 
             trainers.add(trainer);
         }

@@ -1,6 +1,6 @@
 package org.awt05.pokehealer;
 
-import org.awt05.dummies.Pokemon;
+import org.awt05.Pokemon;
 import org.awt05.trainer.Trainer;
 import org.awt05.PokemonContainer;
 import org.awt05.exceptions.PokemonInvalidStateException;

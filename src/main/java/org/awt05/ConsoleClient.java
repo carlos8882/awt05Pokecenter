@@ -1,6 +1,5 @@
 package org.awt05;
 
-import org.awt05.dummies.Pokemon;
 import org.awt05.trainer.Trainer;
 import org.awt05.exceptions.PokemonInvalidStateException;
 import org.awt05.exceptions.PokemonOverflowContainerException;
