@@ -6,40 +6,38 @@ package org.awt05.billPc;
  */
 
 import org.awt05.Pokemon;
-import org.awt05.Trainer;
-import org.awt05.exceptions.PokemonInvalidStateException;
 import org.awt05.exceptions.PokemonOverflowContainerException;
+import org.awt05.trainer.Trainer;
 
 import java.util.HashMap;
 
-
 public class BillPc {
 
-    private HashMap<Integer, BoxList> accountBill;
+    private HashMap<Trainer, BoxList> accountBill;
 
     public BillPc() {
         accountBill = new HashMap<>();
     }
 
     public void turOnPC(Trainer trainer) {
-        if (!isTrainerRegistered(trainer.getId())) {
-            registerTrainer(trainer.getId());
+        if (!isTrainerRegistered(trainer)) {
+            registerTrainer(trainer);
             System.out.println("The trainer was registered successfully");
         }
         System.out.println("Hello " + trainer.getName());
     }
 
-    public PcBox showDefaultBox(int trainerId) {
-        return accountBill.get(trainerId).getBox();
+    public PcBox showDefaultBox(Trainer trainer) {
+        return accountBill.get(trainer).getBox();
     }
 
-    private void registerTrainer(int trainerId) {
+    private void registerTrainer(Trainer trainer) {
         BoxList boxList = new BoxList();
-        accountBill.put(trainerId, boxList);
+        accountBill.put(trainer, boxList);
     }
 
-    public void depositPokemon(int trainerID, Pokemon pokemonIn) {
-        PcBox box = accountBill.get(trainerID).getBox();
+    public void depositPokemon(Trainer trainer, Pokemon pokemonIn) {
+        PcBox box = accountBill.get(trainer).getBox();
         try {
             box.add(pokemonIn);
             System.out.println("The pokemon was added successfully");
@@ -49,9 +47,9 @@ public class BillPc {
         }
     }
 
-    public Pokemon withDrawPokemon(int trainerId, int index) {
+    public Pokemon withDrawPokemon(Trainer trainer, int index) {
         Pokemon pokemonOut = null;
-        PcBox box = accountBill.get(trainerId).getBox();
+        PcBox box = accountBill.get(trainer).getBox();
         try {
             pokemonOut = box.remove(index);
             System.out.println("The pokemon was withdraw successfully");
@@ -61,13 +59,13 @@ public class BillPc {
         return pokemonOut;
     }
 
-    public void switchBox(int trainerId) {
-        accountBill.get(trainerId).switchBoxes();
+    public void switchBox(Trainer trainer) {
+        accountBill.get(trainer).switchBoxes();
         System.out.println("Default box was Switch");
     }
 
-    public boolean isTrainerRegistered(int trainerId) {
-        return accountBill.containsKey(trainerId);
+    private boolean isTrainerRegistered(Trainer trainer) {
+        return accountBill.containsKey(trainer);
     }
 
 

@@ -1,8 +1,6 @@
 package org.awt05.billPc;
 
-import org.awt05.PokemonStorage;
-
-import java.util.List;
+import org.awt05.PokemonContainer;
 
 /**
  * @author: Carlos Meneses Covarrubias
@@ -10,7 +8,7 @@ import java.util.List;
  * @version: 1.0
  */
 
-public class PcBox extends PokemonStorage {
+public class PcBox extends PokemonContainer {
 
     public PcBox() {
         super(24);

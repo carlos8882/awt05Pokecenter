@@ -22,6 +22,11 @@ public class BoxList {
     }
 
     public PcBox getBox() {
+        if (defaultBox == 0) {
+            System.out.println("Current Box: Box 1");
+        } else {
+            System.out.println("Current Box: Box 2");
+        }
         return boxes.get(defaultBox);
     }
 

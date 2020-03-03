@@ -30,4 +30,11 @@ public class HealerBox extends PokemonContainer {
         super.add(pokemon);
     }
 
+    public void transferAll(PokemonContainer contaniner) {
+        for (Pokemon pokemon : this) {
+            contaniner.add(pokemon);
+        }
+        clear();
+    }
+
 }
