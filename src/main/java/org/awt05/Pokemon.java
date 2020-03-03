@@ -1,4 +1,5 @@
 package org.awt05;
+
 import java.util.UUID;
 
 public abstract class Pokemon {
@@ -6,7 +7,6 @@ public abstract class Pokemon {
     private String pokeId;
     private String nickname;
     private boolean isDamaged;
-
 
     public Pokemon(){
         this.getClass().getSimpleName();

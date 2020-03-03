@@ -26,13 +26,6 @@ public class PokemonContainer implements Iterable<Pokemon> {
         pokemons.clear();
     }
 
-    public void transferAll(PokemonContainer contaniner) {
-        for (Pokemon pokemon : this) {
-            contaniner.add(pokemon);
-        }
-        clear();
-    }
-
     public Pokemon remove(int index) {
         return pokemons.remove(index);
     }
