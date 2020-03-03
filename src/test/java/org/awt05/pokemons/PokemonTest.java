@@ -1,5 +1,6 @@
 package org.awt05.pokemons;
 import org.awt05.Pokemon;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -182,5 +183,47 @@ public class PokemonTest {
         );
     }
 
+    @Test
+    public void snorlaxWalksIntoWater() {
+        //given
+        String expectedSkill = "... has used WALKING INTO WATER!!";
+        Snorlax s=new Snorlax();
+        //when
+        s.surf();
+        //then
+        assertEquals("... has used WALKING INTO WATER!!", expectedSkill); //(resultado esperado, resultado obtenido)
+    }
 
+    @Test
+    public void charizard(){
+        //given
+        Charizard c=new Charizard();
+        String expectedNickName = "Chari";
+        String expectedSkill1 = "... has used FLY!!";
+        String expectedSkill2 = "... has used WALKING INTO WATER!!";
+        //when
+        c.setNickname("Chari");
+        String currentNickName = c.getNickname();
+        c.fly();
+                 //c.ember();
+        //then
+        assertEquals(expectedNickName, currentNickName);
+        assertEquals("... has used FLY!!", expectedSkill1);
+                  //assertEquals("... has used Ember!!", expectedSkill2);
+    }
 }
+
+//This is for personal testing only
+    /*
+    Charizard c=new Charizard();
+        c.setNickname("Chari");
+        c.ember();
+        c.fly();
+    Snorlax s=new Snorlax();
+        s.surf();
+    String ID1=c.getPokeId();
+    String ID2=s.getPokeId();
+        System.out.println(ID1);
+        System.out.println(ID2);
+
+     */
