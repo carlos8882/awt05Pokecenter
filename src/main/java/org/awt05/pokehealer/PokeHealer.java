@@ -1,7 +1,7 @@
 package org.awt05.pokehealer;
 
-import org.awt05.Pokemon;
-import org.awt05.dummies.Trainer;
+import org.awt05.dummies.Pokemon;
+import org.awt05.trainer.Trainer;
 import org.awt05.PokemonContainer;
 import org.awt05.exceptions.PokemonInvalidStateException;
 import org.awt05.exceptions.PokemonTypeNotSupportedException;
@@ -45,7 +45,7 @@ public class PokeHealer {
             healerBox.add(pokemon);
         }
         catch (PokemonTypeNotSupportedException | PokemonInvalidStateException exception) {
-            trainer.getBackPak().add(pokemon);
+            trainer.getBag().add(pokemon);
             throw exception;
         }
     }
@@ -68,7 +68,7 @@ public class PokeHealer {
 
     public void recoverPokemons(Trainer trainer) {
         HealerBox healerBox = pokemonsToHeal.get(trainer);
-        healerBox.transferAll(trainer.getBackPak());
+        healerBox.transferAll(trainer.getBag());
     }
 
     public void endService(Trainer trainer) {
