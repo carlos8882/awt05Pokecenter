@@ -212,18 +212,3 @@ public class PokemonTest {
                   //assertEquals("... has used Ember!!", expectedSkill2);
     }
 }
-
-//This is for personal testing only
-    /*
-    Charizard c=new Charizard();
-        c.setNickname("Chari");
-        c.ember();
-        c.fly();
-    Snorlax s=new Snorlax();
-        s.surf();
-    String ID1=c.getPokeId();
-    String ID2=s.getPokeId();
-        System.out.println(ID1);
-        System.out.println(ID2);
-
-     */

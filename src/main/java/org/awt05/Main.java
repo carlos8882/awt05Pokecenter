@@ -14,7 +14,7 @@ public class Main {
     }
 
     private static List<Trainer> trainersProvider() {
-        List<Trainer> trainers = new ArrayList<>();
+        return new ArrayList<>();
     }
 
 }
