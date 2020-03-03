@@ -3,10 +3,10 @@ package org.awt05.trainer;
 import org.awt05.Pokemon;
 import org.awt05.pokemons.Bellsprout;
 import org.awt05.pokemons.Nidoking;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TrainerTest {
 
@@ -43,7 +43,16 @@ public class TrainerTest {
     void givenAPokemon_WhenAddingToATrainerTeam_ThenItIsCorrectlyAdded(){
         //given
         Pokemon pokemon = new Nidoking();
+        Trainer trainer = new Trainer("Test");
 
+        Trainer trainer2 = new Trainer("Test");
+
+        //when
+        trainer.getBag().add(pokemon);
+
+        //then
+        assertEquals(trainer.getBag().getSize(), 1);
+        assertEquals(trainer.getBag().remove(0), pokemon);
     }
 
     @Test
