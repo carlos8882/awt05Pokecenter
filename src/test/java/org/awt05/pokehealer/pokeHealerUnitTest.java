@@ -1,12 +1,11 @@
 package org.awt05.pokehealer;
 
+import org.awt05.Pokemon;
 import org.awt05.PokemonContainer;
-import org.awt05.dummies.Pokemon;
 import org.awt05.dummies.Trainer;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class pokeHealerUnitTest {
@@ -27,7 +26,9 @@ public class pokeHealerUnitTest {
 
     private void setTrainerPokemons(boolean isDamage){
         PokemonContainer backpack = trainer.getBackPak();
-        backpack.add(new Pokemon(isDamage));
+        Pokemon poke = new Pokemon();
+        poke.setDamaged(isDamage);
+        backpack.add(poke);
      }
 
     @Test
@@ -42,12 +43,12 @@ public class pokeHealerUnitTest {
         healer.recoverPokemons(trainer);
         PokemonContainer backpack = trainer.getBackPak();
         Pokemon poke = backpack.remove(0);
-        boolean isDamage = poke.isDamage();
+        boolean isDamage = poke.getIsDamaged();
         int pokemonsInContainerAfter = container.getSize();
         //Then
         assertTrue(pokemonsInContainerBefore > 0);
         assertFalse(isDamage);
-        assertTrue(pokemonsInContainerAfter == 0);
+        assertEquals(0, pokemonsInContainerAfter);
     }
 
     @Test
@@ -62,11 +63,11 @@ public class pokeHealerUnitTest {
         healer.recoverPokemons(trainer);
         PokemonContainer backpack = trainer.getBackPak();
         Pokemon poke = backpack.remove(0);
-        boolean isDamage = poke.isDamage();
+        boolean isDamage = poke.getIsDamaged();
         int pokemonsInContainerAfter = container.getSize();
         //Then
         assertTrue(pokemonsInContainerBefore > 0);
         assertFalse(isDamage);
-        assertTrue(pokemonsInContainerAfter == 0);
+        assertEquals(0, pokemonsInContainerAfter);
     }
 }
