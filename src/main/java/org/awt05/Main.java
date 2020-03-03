@@ -1,5 +1,7 @@
 package org.awt05;
-import org.awt05.dummies.Trainer;
+
+import org.awt05.pokemons.*;
+import org.awt05.trainer.Trainer;
 import org.awt05.pokehealer.PokeHealer;
 
 import java.util.ArrayList;
@@ -14,7 +16,22 @@ public class Main {
     }
 
     private static List<Trainer> trainersProvider() {
-        return new ArrayList<>();
+        List<Trainer> trainers = new ArrayList<>();
+
+        for (int i = 0; i < 3; i++) {
+            Trainer trainer = new Trainer("Trainer");
+
+            PokemonContainer backpack = trainer.getBag();
+            backpack.add(new Paras());
+            backpack.add(new Pikachu());
+            backpack.add(new Raichu());
+            backpack.add(new Snorlax());
+            backpack.add(new Venusaur());
+
+            trainers.add(trainer);
+        }
+
+        return trainers;
     }
 
 }

@@ -1,6 +1,6 @@
 package org.awt05;
 
-import org.awt05.dummies.Trainer;
+import org.awt05.trainer.Trainer;
 import org.awt05.exceptions.PokemonInvalidStateException;
 import org.awt05.exceptions.PokemonOverflowContainerException;
 import org.awt05.exceptions.PokemonTypeNotSupportedException;
@@ -31,7 +31,8 @@ public class ConsoleClient {
             System.out.println("0) To quit.");
             for (int i = 1; i <= trainers.size(); i++) {
                 int index = i - 1;
-                System.out.println(i + ") " + trainers.get(index));
+                System.out.println(i + ") " + trainers.get(index)
+                                                       .toString());
             }
             int input = scanner.nextInt();
 
@@ -90,7 +91,7 @@ public class ConsoleClient {
             int action = scanner.nextInt();
             switch (action) {
                 case 1:
-                    showPokemons(trainer.getBackPak());
+                    showPokemons(trainer.getBag());
                     enterToContinue();
                     break;
                 case 2:
@@ -98,7 +99,7 @@ public class ConsoleClient {
                     enterToContinue();
                     break;
                 case 3:
-                    AskForInserting(trainer);
+                    askForInserting(trainer);
                     enterToContinue();
                     break;
                 case 4:
@@ -132,10 +133,10 @@ public class ConsoleClient {
         }
     }
 
-    public void AskForInserting(Trainer trainer) {
+    public void askForInserting(Trainer trainer) {
         String answer = YES_ANSWER;
         while (Objects.equals(answer, YES_ANSWER)) {
-            if (!showPokemons(trainer.getBackPak())) {
+            if (!showPokemons(trainer.getBag())) {
                 return;
             }
             System.out.println("Insert pokemon number:");
@@ -147,7 +148,7 @@ public class ConsoleClient {
     }
 
     private void insertAll(Trainer trainer) {
-        int size = trainer.getBackPak().getSize();
+        int size = trainer.getBag().getSize();
         for (int i = 0; i < size; i++) {
             insertPokemon(trainer, 0);
         }
@@ -156,7 +157,7 @@ public class ConsoleClient {
 
     private void insertPokemon(Trainer trainer, int index) {
         try {
-            Pokemon pokemon = trainer.getBackPak().remove(index);
+            Pokemon pokemon = trainer.getBag().remove(index);
             healer.addPokemonToHeal(trainer, pokemon);
         } catch (PokemonInvalidStateException | PokemonTypeNotSupportedException | PokemonOverflowContainerException exception) {
             System.out.println(exception.getMessage());
