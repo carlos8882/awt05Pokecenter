@@ -37,7 +37,8 @@ public class BillPc {
     }
 
     public void depositPokemon(Trainer trainer, Pokemon pokemonIn) {
-        PcBox box = accountBill.get(trainer).getBox();
+        PcBox box = accountBill.get(trainer)
+                .getBox();
         try {
             box.add(pokemonIn);
             System.out.println("The pokemon was added successfully");
@@ -49,9 +50,11 @@ public class BillPc {
 
     public Pokemon withDrawPokemon(Trainer trainer, int index) {
         Pokemon pokemonOut = null;
-        PcBox box = accountBill.get(trainer).getBox();
+        PcBox box = accountBill.get(trainer)
+                .getBox();
         try {
-            pokemonOut = box.remove(index);
+            pokemonOut = box
+                    .remove(index);
             System.out.println("The pokemon was withdraw successfully");
         } catch (Exception e) {
             System.out.println("The pokemon was not founded");
@@ -60,7 +63,8 @@ public class BillPc {
     }
 
     public void switchBox(Trainer trainer) {
-        accountBill.get(trainer).switchBoxes();
+        accountBill.get(trainer)
+                .switchBoxes();
         System.out.println("Default box was Switch");
     }
 

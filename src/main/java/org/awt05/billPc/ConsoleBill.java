@@ -49,6 +49,7 @@ public class ConsoleBill {
         int index = scanner.nextInt();
         Pokemon pokemonOut = trainer.getBag().remove(index);
         bill.depositPokemon(trainer, pokemonOut);
+
     }
 
     private void withDrawPokemon(Trainer trainer) {
@@ -70,5 +71,6 @@ public class ConsoleBill {
             i++;
         }
         System.out.println(builder.toString());
+
     }
 }

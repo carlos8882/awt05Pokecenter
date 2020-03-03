@@ -29,6 +29,7 @@ public class BillPcTest {
         //when
         assertEquals(expectedBox, currentBillPC.showDefaultBox(trainerTest).iterator());
 
+
     }
 
     /*@Test
