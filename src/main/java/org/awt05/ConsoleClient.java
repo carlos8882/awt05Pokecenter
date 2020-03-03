@@ -27,10 +27,10 @@ public class ConsoleClient {
     public void run() {
         scanner = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             System.out.println("Select trainer:");
             System.out.println("0) To quit.");
-            for (int i = 1; i <= trainers.size() ; i++) {
+            for (int i = 1; i <= trainers.size(); i++) {
                 int index = i - 1;
                 System.out.println(i + ") " + trainers.get(index));
             }
@@ -43,8 +43,7 @@ public class ConsoleClient {
             try {
                 Trainer activeTrainer = trainers.get(input - 1);
                 selectPlace(activeTrainer);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
         }
@@ -160,8 +159,7 @@ public class ConsoleClient {
         try {
             Pokemon pokemon = trainer.getBackPak().remove(index);
             healer.addPokemonToHeal(trainer, pokemon);
-        }
-        catch (PokemonInvalidStateException | PokemonTypeNotSupportedException | PokemonOverflowContainerException exception) {
+        } catch (PokemonInvalidStateException | PokemonTypeNotSupportedException | PokemonOverflowContainerException exception) {
             System.out.println(exception.getMessage());
         }
     }
@@ -174,8 +172,7 @@ public class ConsoleClient {
         if (!iterator.hasNext()) {
             builder.append("Not pokemons to show.");
             isEnable = false;
-        }
-        else {
+        } else {
             for (int i = 0; iterator.hasNext(); i++) {
                 Pokemon pokemon = iterator.next();
                 builder.append("\t").append(i).append(") ")

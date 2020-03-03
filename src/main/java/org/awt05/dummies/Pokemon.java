@@ -6,7 +6,9 @@ public class Pokemon {
     private String nickname;
     private boolean isDamage;
 
-    public Pokemon(boolean isDamage){ this.isDamage = isDamage; }
+    public Pokemon(boolean isDamage) {
+        this.isDamage = isDamage;
+    }
 
     public boolean isDamage() {
         return isDamage;
@@ -17,8 +19,7 @@ public class Pokemon {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return this.getClass().toString();
     }
 

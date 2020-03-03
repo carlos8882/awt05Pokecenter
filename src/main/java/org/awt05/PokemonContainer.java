@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PokemonContainer implements Iterable<Pokemon>{
+public class PokemonContainer implements Iterable<Pokemon> {
     private List<Pokemon> pokemons;
     private int maxSize;
 
@@ -28,7 +28,7 @@ public class PokemonContainer implements Iterable<Pokemon>{
     }
 
     public void transferAll(PokemonContainer contaniner) {
-        for(Pokemon pokemon: this) {
+        for (Pokemon pokemon : this) {
             contaniner.add(pokemon);
         }
         clear();
