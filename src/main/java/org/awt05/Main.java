@@ -36,8 +36,4 @@ public class Main {
 
         return trainers;
     }
-
-    public static String getHello() {
-        return "Hello I am in a poke center";
-    }
 }

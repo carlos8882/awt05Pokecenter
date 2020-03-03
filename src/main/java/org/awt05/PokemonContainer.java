@@ -1,6 +1,7 @@
 package org.awt05;
 
 import org.awt05.dummies.Pokemon;
+import org.awt05.exceptions.PokemonOverflowContainerException;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -17,7 +18,7 @@ public class PokemonContainer implements Iterable<Pokemon>{
 
     public void add(Pokemon pokemon) {
         if (pokemons.size() >= maxSize) {
-            throw new IllegalStateException("You cannot add more Pokemons than " + maxSize);
+            throw new PokemonOverflowContainerException(maxSize);
         }
         pokemons.add(pokemon);
     }

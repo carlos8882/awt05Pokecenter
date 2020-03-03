@@ -1,8 +1,8 @@
 package org.awt05.exceptions;
 
-public class PokemonOverflowContainerException extends Exception {
+public class PokemonOverflowContainerException extends RuntimeException {
 
-    public PokemonOverflowContainerException(String message) {
-        super(message);
+    public PokemonOverflowContainerException(int maxSize) {
+        super("You cannot add more pokemons than " + maxSize);
     }
 }

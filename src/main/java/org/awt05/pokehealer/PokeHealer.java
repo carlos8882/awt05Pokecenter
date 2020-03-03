@@ -3,8 +3,17 @@ package org.awt05.pokehealer;
 import org.awt05.dummies.Pokemon;
 import org.awt05.dummies.Trainer;
 import org.awt05.PokemonContainer;
+import org.awt05.exceptions.PokemonInvalidStateException;
+import org.awt05.exceptions.PokemonTypeNotSupportedException;
 
 import java.util.*;
+
+/**
+ * PokeHealer is a service that allows you to insert pokemons into a container to heal them,
+ * many trainer can use it, but it'll only heal the first trainer's pokemons in the queue.
+ *
+ * @author Lucero Quiroga Perez
+ */
 
 public class PokeHealer {
     private int maxSize;
@@ -35,7 +44,7 @@ public class PokeHealer {
         try {
             healerBox.add(pokemon);
         }
-        catch (IllegalStateException exception) {
+        catch (PokemonTypeNotSupportedException | PokemonInvalidStateException exception) {
             trainer.getBackPak().add(pokemon);
             throw exception;
         }

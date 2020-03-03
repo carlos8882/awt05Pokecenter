@@ -4,6 +4,15 @@ import org.awt05.dummies.Ghost;
 import org.awt05.dummies.Poison;
 import org.awt05.dummies.Pokemon;
 import org.awt05.PokemonContainer;
+import org.awt05.exceptions.PokemonInvalidStateException;
+import org.awt05.exceptions.PokemonTypeNotSupportedException;
+
+/**
+ *  HealerBox is a pokemon container that avoid insert some types of pokemons (Poison, Ghost)
+ *  and pokemons that are not damage.
+ *
+ *  @author Lucero Quiroga Perez
+ */
 
 public class HealerBox extends PokemonContainer {
     public HealerBox(int maxSize) {
@@ -13,10 +22,10 @@ public class HealerBox extends PokemonContainer {
     @Override
     public void add(Pokemon pokemon) {
         if (!pokemon.isDamage()) {
-            throw new IllegalStateException("Your baby is not damage");
+            throw new PokemonInvalidStateException(pokemon);
         }
         if (pokemon instanceof Poison || pokemon instanceof Ghost) {
-            throw new IllegalStateException("The <" + pokemon.getClass().getName() + "> type is not able to heal yet");
+            throw new PokemonTypeNotSupportedException(pokemon);
         }
         super.add(pokemon);
     }

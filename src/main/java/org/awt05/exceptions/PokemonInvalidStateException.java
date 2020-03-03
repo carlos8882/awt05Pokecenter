@@ -1,8 +1,10 @@
 package org.awt05.exceptions;
 
-public class PokemonInvalidStateException extends Exception {
+import org.awt05.dummies.Pokemon;
 
-    public PokemonInvalidStateException(String message) {
-        super(message);
+public class PokemonInvalidStateException extends RuntimeException {
+
+    public PokemonInvalidStateException(Pokemon pokemon) {
+        super(pokemon.getNickname() + " has the state <Damage: " + pokemon.isDamage() + ">");
     }
 }

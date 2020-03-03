@@ -1,9 +1,11 @@
 package org.awt05.exceptions;
 
-public class PokemonTypeNotSupportedException extends Exception {
+import org.awt05.dummies.Pokemon;
 
-    public PokemonTypeNotSupportedException(String message) {
-        super(message);
+public class PokemonTypeNotSupportedException extends RuntimeException {
+
+    public PokemonTypeNotSupportedException(Pokemon pokemon) {
+        super("The <" + pokemon.getClass().getSimpleName() + "> type is not able to heal yet");
     }
 }
 
