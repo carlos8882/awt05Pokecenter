@@ -1,15 +1,32 @@
 package org.awt05;
 
-/**
- * @author: Carlos Meneses Covarrubias
- * @date: 03/02/2020
- * @version: 1.0
- */
 
-public interface PokemonStorage {
+import org.awt05.exceptions.PokemonOverflowContainerException;
 
-    void addPokemon(Pokemon pokemonIn);
+import java.util.ArrayList;
+import java.util.List;
 
-    Pokemon retrievePokemon(int idPokemon);
+public class PokemonStorage {
+    private List<Pokemon> pokemons;
+    private int maxSize;
 
+    public PokemonStorage(int maxSize) {
+        this.pokemons = new ArrayList<>(maxSize);
+        this.maxSize = maxSize;
+    }
+
+    public void add(Pokemon pokemon) {
+        if (pokemons.size() >= maxSize) {
+            throw new PokemonOverflowContainerException(maxSize);
+        }
+        pokemons.add(pokemon);
+    }
+
+    public Pokemon remove(int index) {
+        return pokemons.remove(index);
+    }
+
+    public int getSize() {
+        return pokemons.size();
+    }
 }
