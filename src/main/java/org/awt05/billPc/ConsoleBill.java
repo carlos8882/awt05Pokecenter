@@ -9,15 +9,15 @@ import java.util.Scanner;
 public class ConsoleBill {
 
     private Scanner scanner;
-    private BillPc bill;
+    private BillPc billPc;
 
-    public ConsoleBill(BillPc bill) {
-        this.bill = bill;
+    public ConsoleBill(BillPc billPc) {
+        this.billPc =billPc;
     }
 
     public void run(Trainer trainer) {
         scanner = new Scanner(System.in);
-        bill.turOnPC(trainer);
+        billPc.turOnPC(trainer);
         while (true) {
             System.out.println("Select an action: ");
             System.out.println("1) Deposit a pokemon\n" +
@@ -33,7 +33,7 @@ public class ConsoleBill {
                     withDrawPokemon(trainer);
                     break;
                 case 3:
-                    bill.switchBox(trainer);
+                    billPc.switchBox(trainer);
                     break;
                 case 4:
                     return;
@@ -48,16 +48,16 @@ public class ConsoleBill {
         showPokemons(trainer.getBag());
         int index = scanner.nextInt();
         Pokemon pokemonOut = trainer.getBag().remove(index);
-        bill.depositPokemon(trainer, pokemonOut);
+        billPc.depositPokemon(trainer, pokemonOut);
 
     }
 
     private void withDrawPokemon(Trainer trainer) {
         System.out.println("Select a Pokemon from your Box: ");
-        PcBox currentBox = bill.showDefaultBox(trainer);
+        PcBox currentBox = billPc.showDefaultBox(trainer);
         showPokemons(currentBox);
         int index = scanner.nextInt();
-        Pokemon pokemonIn = bill.withDrawPokemon(trainer, index);
+        Pokemon pokemonIn = billPc.withDrawPokemon(trainer, index);
         trainer.getBag().add(pokemonIn);
     }
 

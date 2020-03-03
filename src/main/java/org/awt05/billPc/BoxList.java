@@ -15,7 +15,7 @@ public class BoxList {
     private int defaultBox;
 
     public BoxList() {
-        boxes = new ArrayList<>();
+        boxes = new ArrayList<>(2);
         boxes.add(new PcBox());
         boxes.add(new PcBox());
         defaultBox = 0;
