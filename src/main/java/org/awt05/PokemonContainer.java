@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PokemonContainer implements Iterable<Pokemon> {
-    private List<Pokemon> pokemons;
-    private int maxSize;
+public abstract class PokemonContainer implements Iterable<Pokemon> {
+    protected List<Pokemon> pokemons;
+    protected int maxSize;
 
     public PokemonContainer(int maxSize) {
         this.pokemons = new ArrayList<>(maxSize);

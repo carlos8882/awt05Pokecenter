@@ -1,7 +1,6 @@
 package org.awt05.billPc;
 
 import org.awt05.PokemonContainer;
-
 /**
  * @author: Carlos Meneses Covarrubias
  * @date: 03/02/2020
